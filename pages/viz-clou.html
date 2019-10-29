@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>UCBX Web HW</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../reset.css">
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="../styles.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <!-- ****************************** Nav Bar ****************************** -->
+  <nav class="navbar navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">UCBx-pGuillergan</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="../index.html">Home</a></li>
+        <!-- <li><a href="#">Visualization</a></li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Plots
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="viz-temp.html">Max Temperature</a><br/>
+            <a class="dropdown-item" href="viz-humi.html">Humidity</a><br/>
+            <a class="dropdown-item" href="#">Cloudiness</a><br/>
+            <a class="dropdown-item" href="viz-wind.html">Wind Speed</a><br/>
+          </div>
+        </li>
+        <li><a href="#">Comparisons</a></li>
+        <li><a href="#">Data</a></li>
+      </ul>
+
+    </div>
+  </nav>
+  <!-- ****************************** CONTAINERS ****************************** -->
+  
+  <div class="jumbotron">
+    <div class="container">
+      <h2 class="display-4">Latitude vs Temperature Plot</h2>
+      <img src="..\Resources\assets\images\lat_v_clou.png" style="max-width: 100%">
+    </div>
+  </div>
+</body>
+
+</html>
