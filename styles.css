@@ -41,7 +41,7 @@ body {
   margin-right: auto;
   margin-top:  auto;
   margin-bottom: auto;
-  width: 40%;
+  width: 50%;
 }
 
 .row.vdivide [class*='col-']:not(:last-child):after {
@@ -54,4 +54,15 @@ body {
   bottom: 0;
   right: 0;
   min-height: 70px;
+}
+
+.top_marg{
+  margin-top:10px
+}
+
+@media (max-width: 480px) {
+  .top_marg{
+    margin-top:100px;
+  }
+
 }

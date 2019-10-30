@@ -33,8 +33,8 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="viz-temp.html">Max Temperature</a><br/>
-            <a class="dropdown-item" href="#">Humidity</a><br/>
-            <a class="dropdown-item" href="viz-clou.html">Cloudiness</a><br/>
+            <a class="dropdown-item" href="viz-humi.html">Humidity</a><br/>
+            <a class="dropdown-item" href="#">Cloudiness</a><br/>
             <a class="dropdown-item" href="viz-wind.html">Wind Speed</a><br/>
           </div>
         </li>
@@ -46,12 +46,35 @@
   </nav>
   <!-- ****************************** CONTAINERS ****************************** -->
   
-  <div class="jumbotron">
-    <div class="container">
-      <h2 class="display-4">Latitude vs Humidity Plot</h2>
-      <img src="..\Resources\assets\images\lat_v_humi.png" style="max-width: 100%">
+  <div class="container top_marg">
+    <div class="row-fluid">
+      <div class="col-md-12"> 
+        <div class="jumbotron">
+          <div class="container">
+
+            <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="d3.min.js?v=3.2.8"></script>
+            <script type="text/javascript"charset="utf-8">
+                d3.text("../Resources/cities.csv", function(data) {
+                   var parsedCSV = d3.csv.parseRows(data);
+                        var container = d3.select("body")
+                        .append("table")
+                        .selectAll("tr")
+                             .data(parsedCSV).enter()
+                             .append("tr")
+                         .selectAll("td")
+                            .data(function(d) { return d; }).enter()
+                             .append("td")
+                            .text(function(d) { return d; });
+                    });
+                </script>
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
 </body>
 
 </html>
